@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://*.vercel.app"
+    "https://bloodlink-3qpt9jk8o-nikhatkhanum1807-dots-projects.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
