@@ -1,6 +1,8 @@
+console.log("middleware loaded");
+
 const jwt = require("jsonwebtoken");
 
-const protect = (req, res, next) => {
+module.exports = (req, res, next) => {
   let token;
 
   if (
@@ -21,5 +23,3 @@ const protect = (req, res, next) => {
     return res.status(401).json({ message: "No token" });
   }
 };
-
-module.exports = protect;
