@@ -14,13 +14,11 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://vercel.com",
     "https://*.vercel.app"
   ],
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
-
 // API routes
 app.use("/api/users", userRoutes);
 app.use("/api/donors", donorRoutes);
