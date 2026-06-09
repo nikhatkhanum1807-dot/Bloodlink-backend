@@ -11,14 +11,14 @@ const requestRoutes = require("./routes/requestRoutes");
 
 // middleware
 app.use(express.json());
-
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://vercel.com/nikhatkhanum1807-dots-projects/bloodlink/GUAqp8UAbB68nuzKdHySz2eujKMo"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
+}));
 
 // API routes
 app.use("/api/users", userRoutes);
